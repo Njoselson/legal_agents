@@ -1,0 +1,1 @@
+Unfortunately, I was unable to retrieve the necessary information to provide a list of cases regarding tenants with lack of heat in New York City.

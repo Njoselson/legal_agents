@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "y"
+version = "0.1.0"
+description = "A legal llm system for answering rental law questions"
+authors = ["Nathaniel Joselson <nathaniel.joselson@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<=3.13"
+crewai = "^0.30.11"
+crewai-tools = "^0.2.6"
+streamlit = "^1.35.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
