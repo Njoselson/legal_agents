@@ -8,10 +8,7 @@ import streamlit as st
 
 from crewai import Agent, Task, Crew, Process
 from crewai_tools import (
-    DirectoryReadTool,
-    FileReadTool,
     SerperDevTool,
-    WebsiteSearchTool
 )
 
 
@@ -35,9 +32,6 @@ def st_capture(output_func):
 os.environ["OPENAI_MODEL_NAME"] ='gpt-3.5-turbo'  # Adjust based on available model
 
 search_tool = SerperDevTool()
-#docs_tool = DirectoryReadTool(directory='./cases')
-#file_tool = FileReadTool()
-# web_rag_tool = WebsiteSearchTool()
 
 st.title('Legal Decision App')
 example_case = st.text_area(
@@ -113,7 +107,6 @@ judge_case = Task(
 crew = Crew(
   agents=[researcher, lawyer],
   tasks=[judge_case],
-  memory=False,
   verbose=2, #You can set it to 1 or 2 to different logging levels
 )
 if st.button('Test Case'):
